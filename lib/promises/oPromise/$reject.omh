@@ -1,0 +1,12 @@
+Calculate state as kPromiseState.REJECTED
+
+If bool(iRejectCallback)&iRejectCallback.$cando()
+	Do iRejectCallback(pResults,iExtraRejectParams,pErrorText)
+	Calculate state as kPromiseState.FINISHED
+	Do $cinst.$destroy()
+Else If iResolveCallback.$cando() ## If there's no explicit catch() method defined, then use the 'then' method (passing false for success param)
+	Do iResolveCallback(pResults,iExtraResolveParams,pErrorText,kFalse)
+Else
+	Calculate iPendingResults as pResults
+	Calculate iPendingErrText as pErrorText
+End If

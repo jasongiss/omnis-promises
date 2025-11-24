@@ -1,0 +1,35 @@
+[
+	{
+		"name": "$get",
+		"operationid": "get1001",
+		"outputtype": "text/plain",
+		"allowunknownquerystringparams": false,
+		"sendlistsasobjectarray": true,
+		"escapequerystringparams": true,
+		"pvardefs": [
+			{
+				"name": "pHeaders",
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "input",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lStart",
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"initval": "#CT"
+			}
+		]
+	}
+]

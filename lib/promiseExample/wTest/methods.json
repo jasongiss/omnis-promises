@@ -1,0 +1,160 @@
+[
+	{
+		"name": "$construct",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$sendHTTPRequest",
+		"pvardefs": [
+			{
+				"name": "pInput",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lHTTPWorker",
+				"type": "kObjectref",
+				"subtype": ".OW3.OW3 Worker Objects\\HTTPClientWorker",
+				"sublen": 0
+			},
+			{
+				"name": "lPromise",
+				"type": "kObjectref",
+				"subtype": "promises.oPromise",
+				"sublen": 0
+			},
+			{
+				"name": "lURL",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$_onResponseA",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pSuccess",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$_onResponseB",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pSuccess",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$_onResponseC",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pSuccess",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+
+		]
+	}
+]

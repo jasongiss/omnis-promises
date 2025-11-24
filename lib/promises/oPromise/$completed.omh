@@ -1,0 +1,2 @@
+# Default worker $completed callback: Calls $resolve regardless
+Do $cinst.$resolve(pResults)

@@ -1,0 +1,8 @@
+Do iPromises.$define()
+Do iPromises.$cols.$add("promise",kObjectref)
+
+Calculate lTest as $cinst.$objref()
+If isnull(lTest)
+	OK message Error {Promise Manager must be created as an OBJECT REFERENCE - not an Object.}
+	Breakpoint
+End If

@@ -1,0 +1,7 @@
+
+If pResults.httpStatusCode=200
+	Do iResults.$add(utf8tochar(pResults.responseContent))
+	Do $cinst.$redraw()
+Else
+	Breakpoint Error!
+End If

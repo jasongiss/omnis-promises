@@ -1,0 +1,7 @@
+# Calculate luid as OW3.$makeuuid(kFalse)
+Calculate lPromise as $objects.oPromise.$newref($cinst.$objref())
+Do iPromises.$add(lPromise)
+
+# Send to trace log Created promise. There are now [iPromises.$linecount] promises.
+
+Quit method lPromise

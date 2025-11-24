@@ -1,0 +1,11 @@
+Calculate lHTTPWorker as $extobjects.OW3.$objects.HTTPClientWorker.$newref()
+Calculate lURL as con("http://127.0.0.1:",$root.$modes.$serverport,"/api/promiseexample/promisetest/test?input=",pInput)
+Do lHTTPWorker.$init(lURL)
+
+Do iPromiseManager.$createPromise() Returns lPromise
+
+# We can use the promise's $attachToWorker method for very simple cases, whereby the worker's $completed method will resolve the promise:
+Do lPromise.$attachToWorker(lHTTPWorker,kTrue) ## The promise will resolve when the worker completes. The HTTP Worker ref is saved in the promise, so will not go out of scope while the promise lives.
+Do lHTTPWorker.$start()
+
+Quit method lPromise

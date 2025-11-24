@@ -1,0 +1,164 @@
+[
+	{
+		"name": "$construct",
+		"pvardefs": [
+			{
+				"name": "pOwner",
+				"type": "kObjectref",
+				"subtype": "oPromiseManager",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$then",
+		"desc": "Pass a ref to a function to call when this promise 'resolves'.\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)\r\rIf no $catch() method is passed, rejected promises will call this method, passing pErrorText and pSuccess=kFalse.\r\rReturns the promise itself, so you can chain a .$catch() call, for example.",
+		"pvardefs": [
+			{
+				"name": "pCallback",
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1,
+				"desc": "Item reference to a callback method. Syntax should be of the form: \"$cinst().$myMethod.$ref\""
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2,
+				"desc": "A row of extra params to pass to the 'then' function (will be the second param)"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$catch",
+		"desc": "Pass a ref to a function to call when this promise is 'rejected'.\r\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)",
+		"pvardefs": [
+			{
+				"name": "pCallback",
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1,
+				"desc": "Item reference to a callback method. Syntax should be of the form: \"$cinst().$myMethod.$ref\""
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2,
+				"desc": "A row of extra params to pass to the 'then' function (will be the second param)"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$resolve",
+		"desc": "Resolve this promise, calling its 'then' function.",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$reject",
+		"desc": "Reject this promise, calling its 'catch' function.",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$completed",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destroy",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$attachToWorker",
+		"desc": "Attaches this promise to the given worker object as its $callbackinst.\r\rUses a simple generic $completed handler, to just pass the given results row through to the 'then()' method.\rIt will never fail, so should not be used for non-trivial situations.",
+		"pvardefs": [
+			{
+				"name": "pWorker",
+				"type": "kObjectref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pKeepRef",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2,
+				"initval": "kTrue"
+			}
+		],
+		"lvardefs": [
+
+		]
+	}
+]

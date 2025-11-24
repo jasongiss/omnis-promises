@@ -1,0 +1,9 @@
+Calculate state as kPromiseState.RESOLVED
+
+If iResolveCallback.$cando()
+	Do iResolveCallback(pResults,iExtraResolveParams,"",kTrue)
+	Calculate state as kPromiseState.FINISHED
+	Do $cinst.$destroy()
+Else
+	Calculate iPendingResults as pResults
+End If

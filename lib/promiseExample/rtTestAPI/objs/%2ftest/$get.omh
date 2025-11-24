@@ -1,0 +1,5 @@
+# Sit in a tight loop for a second
+While #CT-lStart<60
+End While
+
+Quit method input

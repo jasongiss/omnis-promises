@@ -1,0 +1,6 @@
+Do iPromises.$search($ref.promise=pPromise)
+Do iPromises.$remove(kListDeleteSelected)
+
+Do pPromise.$deleteref()
+
+# Send to trace log deleted promise. There are now [iPromises.$linecount] promises.

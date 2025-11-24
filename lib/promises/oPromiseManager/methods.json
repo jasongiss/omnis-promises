@@ -1,0 +1,61 @@
+[
+	{
+		"name": "$construct",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lTest",
+				"type": "kObjectref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$destruct",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$createPromise",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lPromise",
+				"type": "kObjectref",
+				"subtype": "oPromise",
+				"sublen": 0
+			},
+			{
+				"name": "luid",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$deletePromise",
+		"pvardefs": [
+			{
+				"name": "pPromise",
+				"type": "kObjectref",
+				"subtype": "oPromise",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	}
+]

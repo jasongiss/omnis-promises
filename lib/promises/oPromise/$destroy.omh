@@ -1,0 +1,3 @@
+If iOwner.$deletePromise.$cando()
+	Do iOwner.$deletePromise($cinst.$objref)
+End If

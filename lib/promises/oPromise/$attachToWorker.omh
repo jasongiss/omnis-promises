@@ -1,0 +1,4 @@
+Calculate pWorker.$callbackinst as $cinst
+If pKeepRef
+	Calculate iAttachedWorker as pWorker
+End If

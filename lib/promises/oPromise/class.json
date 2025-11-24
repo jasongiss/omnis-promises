@@ -1,0 +1,85 @@
+{
+	"classtype": "kObjectclass",
+	"omnisversion": "12.0",
+	"designtaskname": "Startup_Task",
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iAttachedWorker",
+			"type": "kObjectref",
+			"subtype": "",
+			"sublen": 0,
+			"initval": "#NULL"
+		},
+		{
+			"name": "iExtraRejectParams",
+			"type": "kRow",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iExtraResolveParams",
+			"type": "kRow",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iOwner",
+			"type": "kObjectref",
+			"subtype": "oPromiseManager",
+			"sublen": 0
+		},
+		{
+			"name": "iPendingErrText",
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "\"\""
+		},
+		{
+			"name": "iPendingResults",
+			"type": "kRow",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iRejectCallback",
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iResolveCallback",
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "state",
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "kPromiseState.PENDING"
+		}
+	],
+	"properties": {
+		"canremotedebugwhenlocked": false,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componentinfo": {
+
+		},
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2025-11-18 14:47:11",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"selfcontained": false,
+		"userinfo": "",
+		"version": ""
+	}
+}
