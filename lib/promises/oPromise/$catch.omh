@@ -5,5 +5,3 @@ Calculate iExtraRejectParams as pExtraParams
 If state=kPromiseState.REJECTED
 	Do $cinst.$reject(iPendingResults,iPendingErrText)
 End If
-
-Quit method $cinst.$objref

@@ -156,5 +156,46 @@
 		"lvardefs": [
 
 		]
+	},
+	{
+		"name": "$_onResponseX",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pSuccess",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lPromise",
+				"type": "kObjectref",
+				"subtype": "promises.oPromise",
+				"sublen": 0
+			}
+		]
 	}
 ]

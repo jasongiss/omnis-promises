@@ -3,4 +3,4 @@ On evClick ## Event Parameters - pRow( Itemreference )
 	Do $cinst.$redraw()
 	
 	Do $cinst.$sendHTTPRequest("A") Returns lPromise
-	Do lPromise.$then($cinst().$_onResponseA.$ref,row("B"))
+	Do lPromise.$then($cinst().$_onResponseX.$ref,row("B")).$then($cinst().$_onResponseX.$ref,row("C")).$then($cinst().$_onResponseX.$ref)

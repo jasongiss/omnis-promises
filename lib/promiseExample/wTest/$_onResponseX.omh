@@ -1,0 +1,18 @@
+
+If pResults.httpStatusCode=200
+	Do iResults.$add(utf8tochar(pResults.responseContent))
+	Do $cinst.$redraw()
+	If len(pResults.C1)
+		Quit method $cinst.$sendHTTPRequest(pExtraParams.C1)
+	End If
+	
+	# No more requests to make, so just return a resolved promise
+	Do iPromiseManager.$createPromise() Returns lPromise
+	Do lPromise.$resolve(#NULL)
+	Quit method lPromise
+Else
+	
+	Do iPromiseManager.$createPromise() Returns lPromise
+	Do lPromise.$reject(#NULL,pResults.httpStatusText)
+	Quit method lPromise
+End If

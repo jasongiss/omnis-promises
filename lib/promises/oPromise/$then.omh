@@ -6,4 +6,6 @@ If state=kPromiseState.RESOLVED
 	Do $cinst.$resolve(iPendingResults)
 End If
 
-Quit method $cinst.$objref
+Calculate iNextPromise as $objects.oPromise.$newref($cinst.$objref,con(iTag,"x"))
+
+Quit method iNextPromise

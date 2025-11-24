@@ -1,0 +1,9 @@
+Do pPromise.$deleteref()
+Calculate iNextPromise as #NULL
+
+If state=kPromiseState.FINISHED
+	# If this promise is finished (it probably is, as this would only be called by a chained promise coming after it), ask its parent to delete this now.
+	If bool(iOwner)&iOwner.$deletePromise.$cando()
+		Do iOwner.$deletePromise($cinst.$objref)
+	End If
+End If

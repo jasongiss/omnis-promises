@@ -26,10 +26,17 @@
 			"sublen": 0
 		},
 		{
+			"name": "iNextPromise",
+			"type": "kObjectref",
+			"subtype": "oPromise",
+			"sublen": 0
+		},
+		{
 			"name": "iOwner",
 			"type": "kObjectref",
-			"subtype": "oPromiseManager",
-			"sublen": 0
+			"subtype": "",
+			"sublen": 0,
+			"desc": "Can be an oPromiseManager or another oPromise in the chain"
 		},
 		{
 			"name": "iPendingErrText",
@@ -55,6 +62,18 @@
 			"type": "kItemref",
 			"subtype": "",
 			"sublen": 0
+		},
+		{
+			"name": "iResolvedPromise",
+			"type": "kObjectref",
+			"subtype": "oPromise",
+			"sublen": 0
+		},
+		{
+			"name": "iTag",
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
 		},
 		{
 			"name": "state",

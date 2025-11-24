@@ -1,0 +1,5 @@
+If pSuccess
+	Do iNextPromise.$resolve(pResults)
+Else
+	Do iNextPromise.$reject(pResults,pErrorText)
+End If

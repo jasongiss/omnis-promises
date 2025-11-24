@@ -1,0 +1,5 @@
+If bool(iNextPromise)
+	Quit method iNextPromise.state<>kPromiseState.FINISHED|iNextPromise.$hasPendingChain()
+End If
+
+Quit method kFalse

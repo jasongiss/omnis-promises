@@ -7,7 +7,8 @@
 				"type": "kObjectref",
 				"subtype": "oPromiseManager",
 				"sublen": 0,
-				"param": 1
+				"param": 1,
+				"desc": "An oPromiseManager or oPromise"
 			}
 		],
 		"lvardefs": [
@@ -26,7 +27,7 @@
 	},
 	{
 		"name": "$then",
-		"desc": "Pass a ref to a function to call when this promise 'resolves'.\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)\r\rIf no $catch() method is passed, rejected promises will call this method, passing pErrorText and pSuccess=kFalse.\r\rReturns the promise itself, so you can chain a .$catch() call, for example.",
+		"desc": "Pass a ref to a function to call when this promise 'resolves'.\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)\r\rIf no $catch() method is passed, rejected promises will call this method, passing pErrorText and pSuccess=kFalse.\r\rReturns a new promise, allowing you to chain multiple promises.",
 		"pvardefs": [
 			{
 				"name": "pCallback",
@@ -114,6 +115,40 @@
 		]
 	},
 	{
+		"name": "$attachToWorker",
+		"desc": "Attaches this promise to the given worker object as its $callbackinst.\r\rUses a simple generic $completed handler, to just pass the given results row through to the 'then()' method.\rIt will never fail, so should not be used for non-trivial situations.",
+		"pvardefs": [
+			{
+				"name": "pWorker",
+				"type": "kObjectref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pKeepRef",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2,
+				"initval": "kTrue"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "-- INTERNAL --",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
 		"name": "$completed",
 		"pvardefs": [
 			{
@@ -138,24 +173,61 @@
 		]
 	},
 	{
-		"name": "$attachToWorker",
-		"desc": "Attaches this promise to the given worker object as its $callbackinst.\r\rUses a simple generic $completed handler, to just pass the given results row through to the 'then()' method.\rIt will never fail, so should not be used for non-trivial situations.",
+		"name": "$deletePromise",
 		"pvardefs": [
 			{
-				"name": "pWorker",
+				"name": "pPromise",
 				"type": "kObjectref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$_resolveNextPromise",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
 				"param": 1
 			},
 			{
-				"name": "pKeepRef",
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pSuccess",
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
-				"param": 2,
-				"initval": "kTrue"
+				"param": 4
 			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$hasPendingChain",
+		"desc": "Returns true if there is another promise pending anywhere in the chain after this one.",
+		"pvardefs": [
+
 		],
 		"lvardefs": [
 
