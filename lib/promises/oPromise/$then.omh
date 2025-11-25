@@ -1,4 +1,5 @@
-Set reference iResolveCallback to pCallback.$ref
+Set reference iResolveCallback to pFulfilledCallback.$ref
+Set reference iRejectCallback to pRejectedCallback.$ref
 Calculate iExtraResolveParams as pExtraParams
 
 # If the promise is already resolved, call the 'then' function immediately:

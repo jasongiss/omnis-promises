@@ -30,19 +30,29 @@
 		"desc": "Pass a ref to a function to call when this promise 'resolves'.\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)\r\rIf no $catch() method is passed, rejected promises will call this method, passing pErrorText and pSuccess=kFalse.\r\rReturns a new promise, allowing you to chain multiple promises.",
 		"pvardefs": [
 			{
-				"name": "pCallback",
+				"name": "pFulfilledCallback",
 				"type": "kItemref",
 				"subtype": "",
 				"sublen": 0,
 				"param": 1,
-				"desc": "Item reference to a callback method. Syntax should be of the form: \"$cinst().$myMethod.$ref\""
+				"desc": "Item reference to a callback method to call on successful completion. Syntax should be of the form: \"$cinst().$myMethod.$ref\""
+			},
+			{
+				"name": "pRejectedCallback",
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2,
+				"initval": "#NULL",
+				"desc": "Item reference to a callback method to call on failure. Syntax should be of the form: \"$cinst().$myMethod.$ref\""
 			},
 			{
 				"name": "pExtraParams",
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
-				"param": 2,
+				"param": 3,
+				"initval": "#NULL",
 				"desc": "A row of extra params to pass to the 'then' function (will be the second param)"
 			}
 		],
