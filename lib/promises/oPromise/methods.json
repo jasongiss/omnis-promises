@@ -27,7 +27,7 @@
 	},
 	{
 		"name": "$then",
-		"desc": "Pass a ref to a function to call when this promise 'resolves'.\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)\r\rIf no $catch() method is passed, rejected promises will call this method, passing pErrorText and pSuccess=kFalse.\r\rReturns a new promise, allowing you to chain multiple promises.",
+		"desc": "Pass a ref to a function to call when this promise is 'fulfilled' or is 'rejected'.\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)\r\rIf no rejectedCallback method is passed, rejected promises will call the rejected method of subsequent promises in the chain, or else this pFulfilledCalback, passing pErrorText and pSuccess=kFalse.\r\rReturns a new promise, allowing you to chain multiple promises.",
 		"pvardefs": [
 			{
 				"name": "pFulfilledCallback",
@@ -62,7 +62,7 @@
 	},
 	{
 		"name": "$catch",
-		"desc": "Pass a ref to a function to call when this promise is 'rejected'.\r\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)",
+		"desc": "This is equivalent to $then(#NULL,pCallback).\rIt is provided as 'syntactic sugar' - to aid readability.",
 		"pvardefs": [
 			{
 				"name": "pCallback",
@@ -125,7 +125,8 @@
 				"name": "lRejectCallback",
 				"type": "kItemref",
 				"subtype": "",
-				"sublen": 0
+				"sublen": 0,
+				"initval": "#NULL"
 			}
 		]
 	},
