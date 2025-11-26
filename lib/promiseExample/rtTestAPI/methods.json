@@ -16,5 +16,14 @@
 		"lvardefs": [
 
 		]
+	},
+	{
+		"name": "$completed",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
 	}
 ]

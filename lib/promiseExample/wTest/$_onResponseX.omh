@@ -2,7 +2,14 @@
 If pResults.httpStatusCode=200
 	Do iResults.$add(utf8tochar(pResults.responseContent))
 	Do $cinst.$redraw()
-	If len(pResults.C1)
+	If len(pExtraParams.C1)
+		
+		If pExtraParams.C1="F"
+			Do iPromiseManager.$createPromise() Returns lPromise
+			Do lPromise.$reject(#NULL,"Something awful happened")
+			Quit method lPromise
+		End If
+		
 		Quit method $cinst.$sendHTTPRequest(pExtraParams.C1)
 	End If
 	

@@ -1,5 +1,10 @@
-# Sit in a tight loop for a second
-While #CT-lStart<60
-End While
+# Wait for a second
+Calculate iTimer as $extobjects.Timer Library.$objects.Timer worker.$newref()
+Calculate iTimer.$useseconds as kTrue
+Calculate iTimer.$timervalue as 1
+Calculate iTimer.$callbackinst as $cinst
 
-Quit method input
+Calculate iInput as input
+Calculate $cinst.$restfulapiwillclose as kFalse
+
+Do iTimer.$starttimer()

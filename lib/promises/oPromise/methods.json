@@ -121,7 +121,12 @@
 			}
 		],
 		"lvardefs": [
-
+			{
+				"name": "lRejectCallback",
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
 		]
 	},
 	{
@@ -143,6 +148,16 @@
 				"param": 2,
 				"initval": "kTrue"
 			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$cancel",
+		"desc": "Cancel this promise and any prior promises up the chain.",
+		"pvardefs": [
+
 		],
 		"lvardefs": [
 
@@ -176,7 +191,14 @@
 	{
 		"name": "$destroy",
 		"pvardefs": [
-
+			{
+				"name": "pDestroyChain",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1,
+				"initval": "kFalse"
+			}
 		],
 		"lvardefs": [
 
@@ -241,6 +263,20 @@
 		],
 		"lvardefs": [
 
+		]
+	},
+	{
+		"name": "$_findRejectHandler",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lRef",
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
 		]
 	}
 ]

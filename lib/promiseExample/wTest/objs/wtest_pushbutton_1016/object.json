@@ -44,7 +44,7 @@
 		"iconid": 0,
 		"inactnorec": false,
 		"keyevents": false,
-		"left": 30,
+		"left": 32,
 		"mouseevents": false,
 		"nodropcursor": 0,
 		"nogray": false,
@@ -63,7 +63,7 @@
 		"textcolor": "kColorDefault",
 		"tooltip": "",
 		"tooltippos": "kTooltipPosMouse",
-		"top": 63,
+		"top": 68,
 		"userinfo": "",
 		"visible": true,
 		"width": 194

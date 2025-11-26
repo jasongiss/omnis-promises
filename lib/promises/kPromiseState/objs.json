@@ -34,5 +34,14 @@
 		"subtype": "kShortint",
 		"sublen": 0,
 		"value": "4"
+	},
+	{
+		"name": "CANCELLED",
+		"order": 5,
+		"desc": "",
+		"type": "kInteger",
+		"subtype": "kShortint",
+		"sublen": 0,
+		"value": "5"
 	}
 ]

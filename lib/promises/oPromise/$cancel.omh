@@ -1,0 +1,8 @@
+If state=kPromiseState.PENDING
+	Calculate state as kPromiseState.CANCELLED
+	
+	# Cancel any previous promises up the chain
+	If iOwner.$cancel.$cando()
+		Do iOwner.$cancel()
+	End If
+End If

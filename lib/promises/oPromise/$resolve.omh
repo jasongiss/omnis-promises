@@ -1,15 +1,21 @@
-Calculate state as kPromiseState.RESOLVED
-
-If iResolveCallback.$cando()
-	Do iResolveCallback(pResults,iExtraResolveParams,"",kTrue) Returns iResolvedPromise
-	If bool(iResolvedPromise)
-		Do iResolvedPromise.$then($cinst().$_resolveNextPromise.$ref)
-	Else If bool(iNextPromise)
-		Do iNextPromise.$resolve(#NULL)
+If state=kPromiseState.PENDING
+	
+	Calculate state as kPromiseState.RESOLVED
+	
+	If iResolveCallback.$cando()
+		Do iResolveCallback(pResults,iExtraResolveParams,"",kTrue) Returns iResolvedPromise
+		If bool(iResolvedPromise)
+			Do iResolvedPromise.$then($cinst().$_resolveNextPromise.$ref)
+		Else If bool(iNextPromise)
+			Do iNextPromise.$resolve(#NULL)
+		End If
+		
+		Calculate state as kPromiseState.FINISHED
+	Else
+		Calculate iPendingResults as pResults
+		Quit method
 	End If
 	
-	Calculate state as kPromiseState.FINISHED
-	Do $cinst.$destroy()
-Else
-	Calculate iPendingResults as pResults
 End If
+
+Do $cinst.$destroy()

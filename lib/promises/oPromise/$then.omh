@@ -5,6 +5,8 @@ Calculate iExtraResolveParams as pExtraParams
 # If the promise is already resolved, call the 'then' function immediately:
 If state=kPromiseState.RESOLVED
 	Do $cinst.$resolve(iPendingResults)
+Else If state=kPromiseState.REJECTED
+	Do $cinst.$reject(iPendingResults,iPendingErrText)
 End If
 
 Calculate iNextPromise as $objects.oPromise.$newref($cinst.$objref,con(iTag,"x"))

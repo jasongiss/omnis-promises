@@ -9,7 +9,18 @@
 
 	],
 	"ivardefs": [
-
+		{
+			"name": "iInput",
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iTimer",
+			"type": "kObjectref",
+			"subtype": ".Timer Library.Timer worker",
+			"sublen": 0
+		}
 	],
 	"properties": {
 		"basehttpresponseheaders": "",

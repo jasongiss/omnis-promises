@@ -1,7 +1,1 @@
-Set reference iRejectCallback to pCallback.$ref
-Calculate iExtraRejectParams as pExtraParams
-
-# If the promise is already rejected, call the catch function immediately:
-If state=kPromiseState.REJECTED
-	Do $cinst.$reject(iPendingResults,iPendingErrText)
-End If
+Do $cinst.$then(#NULL,pCallback.$ref,pExtraParams)

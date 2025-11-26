@@ -1,7 +1,14 @@
-If bool(iResolvedPromise)
+
+If not(pDestroyChain)&bool(iResolvedPromise)&bool(iNextPromise)
 	If iNextPromise.state<>kPromiseState.FINISHED|iNextPromise.$hasPendingChain()
 		Send to trace log Promise [iTag] is being retained
 		Quit method ## Don't destroy this yet - its chain is continuing
+	End If
+End If
+
+If pDestroyChain
+	If bool(iNextPromise)
+		Do iNextPromise.$destroy(kTrue)
 	End If
 End If
 

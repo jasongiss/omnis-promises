@@ -9,6 +9,12 @@
 	],
 	"ivardefs": [
 		{
+			"name": "iPromise",
+			"type": "kObjectref",
+			"subtype": "promises.oPromise",
+			"sublen": 0
+		},
+		{
 			"name": "iPromiseManager",
 			"type": "kObjectref",
 			"subtype": "promises.oPromiseManager",
@@ -55,7 +61,7 @@
 		"growbox": true,
 		"hasmenus": false,
 		"hasstatusbar": false,
-		"height": 400,
+		"height": 352,
 		"helpbutton": false,
 		"helpfile": 0,
 		"horzgrid": 8,

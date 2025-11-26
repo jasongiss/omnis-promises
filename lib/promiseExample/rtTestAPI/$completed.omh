@@ -1,0 +1,5 @@
+Do $cinst.$sethttpstatus(200)
+
+Do $cinst.$addhttpresponseheader("Content-Type","text/plain")
+Do $cinst.$sendhttpcontent(iInput)
+Do $cinst.$close()

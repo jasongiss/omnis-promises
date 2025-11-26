@@ -55,13 +55,15 @@
 			"name": "iRejectCallback",
 			"type": "kItemref",
 			"subtype": "",
-			"sublen": 0
+			"sublen": 0,
+			"initval": "#NULL"
 		},
 		{
 			"name": "iResolveCallback",
 			"type": "kItemref",
 			"subtype": "",
-			"sublen": 0
+			"sublen": 0,
+			"initval": "#NULL"
 		},
 		{
 			"name": "iResolvedPromise",

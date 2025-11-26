@@ -1,0 +1,12 @@
+Calculate #S1 as isnull(iRejectCallback.$validref)
+If not(isnull(iRejectCallback.$validref))
+	Quit method iRejectCallback.$ref
+	
+Else If bool(iNextPromise)
+	Set reference lRef to iNextPromise.$_findRejectHandler().$ref
+	Quit method lRef.$ref
+	
+Else
+	# No reject handler found.
+	Quit method #NULL
+End If
