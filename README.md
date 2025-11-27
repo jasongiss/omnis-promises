@@ -2,6 +2,7 @@
 
 ## Installation
 The `lib` folder contains a `promises` Omnis library (exported to JSON), which you should import into Omnis, and exposes functionality for simple Promise-like behaviour in Omnis Studio.
+Note that to import this library, you need to use Studio 12, and make sure that the **$exportimportjsonoptions** Preference has **fullexportimport** set to **false**.
 
 Note that the Objects used here should generally be **Object References**.
 
