@@ -5,7 +5,12 @@
 
 		],
 		"lvardefs": [
-
+			{
+				"name": "iPromise",
+				"type": "kObjectref",
+				"subtype": "promises.oPromise",
+				"sublen": 0
+			}
 		]
 	}
 ]

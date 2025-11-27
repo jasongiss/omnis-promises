@@ -1,4 +1,4 @@
-If state=kPromiseState.PENDING
+If state<>kPromiseState.FINISHED
 	
 	Calculate state as kPromiseState.REJECTED
 	
@@ -7,9 +7,9 @@ If state=kPromiseState.PENDING
 	If not(isnull(lRejectCallback.$validref))&lRejectCallback.$cando()
 		Do lRejectCallback(pResults,iExtraRejectParams,pErrorText,kFalse)
 		Calculate state as kPromiseState.FINISHED
-		Do $cinst.$destroy(kTrue)
 	Else If not(isnull((iResolveCallback.$validref)))&iResolveCallback.$cando() ## If there's no explicit catch() method defined (here or down the chain), then use the 'then' method (passing false for success param)
 		Do iResolveCallback(pResults,iExtraResolveParams,pErrorText,kFalse)
+		Calculate state as kPromiseState.FINISHED
 	Else
 		Calculate iPendingResults as pResults
 		Calculate iPendingErrText as pErrorText

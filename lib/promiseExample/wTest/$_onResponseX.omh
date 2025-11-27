@@ -5,21 +5,15 @@ If pResults.httpStatusCode=200
 	If len(pExtraParams.C1)
 		
 		If pExtraParams.C1="F"
-			Do iPromiseManager.$createPromise() Returns lPromise
-			Do lPromise.$reject(#NULL,"Something awful happened")
-			Quit method lPromise
+			Quit method iPromiseManager.$newRejectedPromise("Something awful happened")
 		End If
 		
 		Quit method $cinst.$sendHTTPRequest(pExtraParams.C1)
 	End If
 	
 	# No more requests to make, so just return a resolved promise
-	Do iPromiseManager.$createPromise() Returns lPromise
-	Do lPromise.$resolve(#NULL)
-	Quit method lPromise
+	Quit method iPromiseManager.$newFulfilledPromise()
 Else
 	
-	Do iPromiseManager.$createPromise() Returns lPromise
-	Do lPromise.$reject(#NULL,pResults.httpStatusText)
-	Quit method lPromise
+	Quit method iPromiseManager.$newRejectedPromise(pResults.httpStatusText)
 End If

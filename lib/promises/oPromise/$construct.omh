@@ -1,1 +1,6 @@
 Calculate iOwner as pOwner
+Calculate iTag as pTag
+If len(iTag)=0
+	Calculate iTag as OW3.$makeuuid()
+End If
+# Send to trace log Created promise [iTag]

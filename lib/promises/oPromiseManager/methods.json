@@ -63,5 +63,69 @@
 		"lvardefs": [
 
 		]
+	},
+	{
+		"name": "$newFulfilledPromise",
+		"desc": "Creates a promise which is already fulfilled.",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pTag",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lPromise",
+				"type": "kObjectref",
+				"subtype": "oPromise",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$newRejectedPromise",
+		"desc": "Creates a promise which is already rejected.",
+		"pvardefs": [
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1
+			},
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2,
+				"initval": "#NULL"
+			},
+			{
+				"name": "pTag",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lPromise",
+				"type": "kObjectref",
+				"subtype": "oPromise",
+				"sublen": 0
+			}
+		]
 	}
 ]

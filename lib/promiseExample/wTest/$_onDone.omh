@@ -1,0 +1,5 @@
+If pSuccess
+	OK message Complete {All Done}
+Else
+	OK message Error {[pErrorText]}
+End If

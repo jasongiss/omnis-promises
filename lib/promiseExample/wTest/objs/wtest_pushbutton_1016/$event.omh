@@ -8,9 +8,9 @@ On evClick ## Event Parameters - pRow( Itemreference )
 	Do $cinst.$redraw()
 	
 	Do $cinst.$sendHTTPRequest("A") Returns iPromise
-	# Do lPromise.$then($cinst().$_onResponseX.$ref,,row("B")).$then($cinst().$_onResponseX.$ref,,row("C")).$then($cinst().$_onResponseX.$ref).$then(,$cinst().$_onError.$ref)
 	
 	Do iPromise.$then($cinst().$_onResponseX.$ref,,row("B")) Returns iPromise
 	Do iPromise.$then($cinst().$_onResponseX.$ref,,row("C")) Returns iPromise
 	Do iPromise.$then($cinst().$_onResponseX.$ref,,row("D")) Returns iPromise
-	Do iPromise.$catch($cinst.$_onError.$ref)
+	Do iPromise.$then($cinst().$_onDone.$ref) Returns iPromise
+	Do iPromise.$catch($cinst().$_onError.$ref)

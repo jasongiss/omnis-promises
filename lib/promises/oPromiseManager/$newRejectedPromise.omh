@@ -1,0 +1,3 @@
+Calculate lPromise as $cinst.$createPromise(pTag)
+Do lPromise.$reject(pResults,pErrorText)
+Quit method lPromise

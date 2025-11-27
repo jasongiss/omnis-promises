@@ -9,6 +9,13 @@
 				"sublen": 0,
 				"param": 1,
 				"desc": "An oPromiseManager or oPromise"
+			},
+			{
+				"name": "pTag",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
 			}
 		],
 		"lvardefs": [
@@ -18,12 +25,17 @@
 	{
 		"name": "$destruct",
 		"pvardefs": [
-
+			{
+				"name": "pPromise",
+				"type": "kObjectref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
 		],
 		"lvardefs": [
 
-		],
-		"empty": true
+		]
 	},
 	{
 		"name": "$then",
