@@ -5,6 +5,8 @@ The `lib` folder contains a `promises` Omnis library (exported to JSON), which y
 
 Note that the Objects used here should generally be **Object References**.
 
+There is also a `promiseExample` library in the `lib` folder. You can also import this into Omnis Studio to see a simple example of using promises.
+
 
 ## What is a Promise?
 A Promise represents a pending action (usually asynchronous), which will complete at some point in the future. Promises are either '**resolved**' upon success, or '**rejected**' on failure.
