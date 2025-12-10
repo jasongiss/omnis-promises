@@ -127,5 +127,47 @@
 				"sublen": 0
 			}
 		]
+	},
+	{
+		"name": "$resolvePromiseCallback",
+		"desc": "This method can be used as a promise callback method, which will resolve (or reject) another promise, which is provided as column1 of 'pExtraParams'.\r\rThis is useful if you have a 'main' promise you want to return from a method, and have that promise resolved at the end of a chain of other promises.",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pSuccess",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lResultPromise",
+				"type": "kObjectref",
+				"subtype": "promises.oPromise",
+				"sublen": 0
+			}
+		]
 	}
 ]

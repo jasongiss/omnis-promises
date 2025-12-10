@@ -1,0 +1,6 @@
+Calculate lResultPromise as pExtraParams.C1
+If pSuccess
+	Do lResultPromise.$resolve(pResults)
+Else
+	Do lResultPromise.$reject(pResults,pErrorText)
+End If
