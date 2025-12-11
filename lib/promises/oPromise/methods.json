@@ -73,6 +73,43 @@
 		]
 	},
 	{
+		"name": "$thenPushToClient",
+		"pvardefs": [
+			{
+				"name": "pFormInst",
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pPushID",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 3
+			},
+			{
+				"name": "pPushErrorID",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 4,
+				"initval": "\"ERROR\""
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
 		"name": "$catch",
 		"desc": "This is equivalent to $then(#NULL,pCallback).\rIt is provided as 'syntactic sugar' - to aid readability.",
 		"pvardefs": [
@@ -287,6 +324,71 @@
 			{
 				"name": "lRef",
 				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$_doPushToClient",
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pErrorText",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pSuccess",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lExtraParams",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lFormInst",
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lRejectPushID",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lResolvePushID",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lRow",
+				"type": "kRow",
 				"subtype": "",
 				"sublen": 0
 			}

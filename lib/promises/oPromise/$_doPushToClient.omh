@@ -1,0 +1,22 @@
+Set reference lFormInst to pExtraParams.C1
+Calculate lResolvePushID as pExtraParams.C2
+Calculate lExtraParams as pExtraParams.C3
+Calculate lRejectPushID as pExtraParams.C4
+
+If bool(lFormInst)
+	
+	Do lRow.$define()
+	Do lRow.$cols.$add("id",kCharacter,kSimplechar,255)
+	Do lRow.$cols.$add("data",kRow)
+	Do lRow.$cols.$add("extraParams",kRow)
+	
+	If pSuccess
+		Do lRow.$assigncols(lResolvePushID,pResults,lExtraParams)
+	Else
+		Do lRow.$assigncols(lRejectPushID,pResults,lExtraParams)
+	End If
+	Do lFormInst.$pushdata(lRow)
+	
+Else
+	Breakpoint Form instance not found
+End If
