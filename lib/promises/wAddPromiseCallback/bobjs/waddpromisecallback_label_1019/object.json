@@ -1,0 +1,33 @@
+{
+	"ident": 1019,
+	"order": 16386,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kLeftJst",
+		"backcolor": "RGBA(kColorBackFill,255)",
+		"backpattern": 15,
+		"bordercolor": "RGBA(0,0,0,255)",
+		"componentinfo": {
+
+		},
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"effect": "kBorderNone",
+		"fieldstyle": "",
+		"font": 4,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "RGBA(kColorForeFill,255)",
+		"height": 28,
+		"left": 32,
+		"linestyle": 1,
+		"objlink": 0,
+		"text": "Callback Method Name:",
+		"textcolor": "kColorWindowText",
+		"top": 209,
+		"userinfo": "",
+		"vertcentertext": true,
+		"visible": true,
+		"width": 219
+	}
+}

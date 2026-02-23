@@ -1,0 +1,17 @@
+# Enter your initialization code here
+Do sys(194) Returns iMethodEditors
+Do iMethodEditors.$search($ref.ismethodeditor)
+Do iMethodEditors.$remove(kListKeepSelected)
+
+If iMethodEditors.$linecount=0
+	OK message Warning {No method editors are open, so callbacks cannot be added}
+	Do $cinst.$close()
+	Quit method
+End If
+
+Do iMethodEditors.$cols.$add("dispName",kCharacter,kSimplechar)
+
+Do iMethodEditors.$sendall($ref.dispName.$assign(iMethodEditors.classitem().$name))
+Calculate iMethodEditors.$line as 1
+
+Do $cinst.$classSelected()

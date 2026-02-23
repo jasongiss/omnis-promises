@@ -1,9 +1,11 @@
 [
 	{
 		"name": "$construct",
+		"order": 1,
 		"pvardefs": [
 			{
 				"name": "pOwner",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "oPromiseManager",
 				"sublen": 0,
@@ -12,6 +14,7 @@
 			},
 			{
 				"name": "pTag",
+				"order": 2,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -24,9 +27,11 @@
 	},
 	{
 		"name": "$destruct",
+		"order": 2,
 		"pvardefs": [
 			{
 				"name": "pPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "",
 				"sublen": 0,
@@ -39,10 +44,12 @@
 	},
 	{
 		"name": "$then",
+		"order": 3,
 		"desc": "Pass a ref to a function to call when this promise is 'fulfilled' or is 'rejected'.\rThe function will receive parameters:\r1) pResults (row)\r2) pExtraParams (row)\r3) pErrorText (char)\r4) pSuccess (boolean)\r\rIf no rejectedCallback method is passed, rejected promises will call the rejected method of subsequent promises in the chain, or else this pFulfilledCalback, passing pErrorText and pSuccess=kFalse.\r\rReturns a new promise, allowing you to chain multiple promises.",
 		"pvardefs": [
 			{
 				"name": "pFulfilledCallback",
+				"order": 1,
 				"type": "kItemref",
 				"subtype": "",
 				"sublen": 0,
@@ -51,6 +58,7 @@
 			},
 			{
 				"name": "pRejectedCallback",
+				"order": 2,
 				"type": "kItemref",
 				"subtype": "",
 				"sublen": 0,
@@ -60,6 +68,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 3,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -74,9 +83,11 @@
 	},
 	{
 		"name": "$thenPushToClient",
+		"order": 4,
 		"pvardefs": [
 			{
 				"name": "pFormInst",
+				"order": 1,
 				"type": "kItemref",
 				"subtype": "",
 				"sublen": 0,
@@ -84,6 +95,7 @@
 			},
 			{
 				"name": "pPushID",
+				"order": 2,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -91,6 +103,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 3,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -98,6 +111,7 @@
 			},
 			{
 				"name": "pPushErrorID",
+				"order": 4,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -111,10 +125,12 @@
 	},
 	{
 		"name": "$catch",
+		"order": 5,
 		"desc": "This is equivalent to $then(#NULL,pCallback).\rIt is provided as 'syntactic sugar' - to aid readability.",
 		"pvardefs": [
 			{
 				"name": "pCallback",
+				"order": 1,
 				"type": "kItemref",
 				"subtype": "",
 				"sublen": 0,
@@ -123,6 +139,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -136,10 +153,12 @@
 	},
 	{
 		"name": "$resolve",
+		"order": 6,
 		"desc": "Resolve this promise, calling its 'then' function.",
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 1,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -152,10 +171,12 @@
 	},
 	{
 		"name": "$reject",
+		"order": 7,
 		"desc": "Reject this promise, calling its 'catch' function.",
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 1,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -163,6 +184,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 2,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -172,6 +194,7 @@
 		"lvardefs": [
 			{
 				"name": "lRejectCallback",
+				"order": 3,
 				"type": "kItemref",
 				"subtype": "",
 				"sublen": 0,
@@ -181,10 +204,12 @@
 	},
 	{
 		"name": "$attachToWorker",
+		"order": 8,
 		"desc": "Attaches this promise to the given worker object as its $callbackinst.\r\rUses a simple generic $completed handler, to just pass the given results row through to the 'then()' method.\rIt will never fail, so should not be used for non-trivial situations.",
 		"pvardefs": [
 			{
 				"name": "pWorker",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "",
 				"sublen": 0,
@@ -192,6 +217,7 @@
 			},
 			{
 				"name": "pKeepRef",
+				"order": 2,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -205,6 +231,7 @@
 	},
 	{
 		"name": "$cancel",
+		"order": 9,
 		"desc": "Cancel this promise and any prior promises up the chain.",
 		"pvardefs": [
 
@@ -215,6 +242,7 @@
 	},
 	{
 		"name": "-- INTERNAL --",
+		"order": 10,
 		"pvardefs": [
 
 		],
@@ -225,9 +253,11 @@
 	},
 	{
 		"name": "$completed",
+		"order": 11,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 1,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -240,9 +270,11 @@
 	},
 	{
 		"name": "$destroy",
+		"order": 12,
 		"pvardefs": [
 			{
 				"name": "pDestroyChain",
+				"order": 1,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -256,9 +288,11 @@
 	},
 	{
 		"name": "$deletePromise",
+		"order": 13,
 		"pvardefs": [
 			{
 				"name": "pPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "",
 				"sublen": 0,
@@ -271,9 +305,11 @@
 	},
 	{
 		"name": "$_resolveNextPromise",
+		"order": 14,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 1,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -281,6 +317,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -288,6 +325,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 3,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -295,6 +333,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 4,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -307,6 +346,7 @@
 	},
 	{
 		"name": "$hasPendingChain",
+		"order": 15,
 		"desc": "Returns true if there is another promise pending anywhere in the chain after this one.",
 		"pvardefs": [
 
@@ -317,12 +357,14 @@
 	},
 	{
 		"name": "$_findRejectHandler",
+		"order": 16,
 		"pvardefs": [
 
 		],
 		"lvardefs": [
 			{
 				"name": "lRef",
+				"order": 1,
 				"type": "kItemref",
 				"subtype": "",
 				"sublen": 0
@@ -331,9 +373,11 @@
 	},
 	{
 		"name": "$_doPushToClient",
+		"order": 536870929,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -341,6 +385,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 3,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -348,6 +393,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 4,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -355,6 +401,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 5,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -364,30 +411,35 @@
 		"lvardefs": [
 			{
 				"name": "lExtraParams",
+				"order": 7,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0
 			},
 			{
 				"name": "lFormInst",
+				"order": 1,
 				"type": "kItemref",
 				"subtype": "",
 				"sublen": 0
 			},
 			{
 				"name": "lRejectPushID",
+				"order": 8,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000
 			},
 			{
 				"name": "lResolvePushID",
+				"order": 6,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000
 			},
 			{
 				"name": "lRow",
+				"order": 9,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0

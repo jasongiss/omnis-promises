@@ -1,22 +1,35 @@
 [
 	{
 		"name": "$construct",
+		"order": 1,
 		"pvardefs": [
 
 		],
 		"lvardefs": [
-
-		],
-		"empty": true
+			{
+				"name": "lBin",
+				"order": 1,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lBits",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
 	},
 	{
 		"name": "$destruct",
+		"order": 2,
 		"pvardefs": [
 
 		],
 		"lvardefs": [
 
-		],
-		"empty": true
+		]
 	}
 ]

@@ -8,6 +8,7 @@
 	"ivardefs": [
 		{
 			"name": "iAttachedWorker",
+			"order": 1,
 			"type": "kObjectref",
 			"subtype": "",
 			"sublen": 0,
@@ -15,24 +16,28 @@
 		},
 		{
 			"name": "iExtraRejectParams",
+			"order": 2,
 			"type": "kRow",
 			"subtype": "",
 			"sublen": 0
 		},
 		{
 			"name": "iExtraResolveParams",
+			"order": 3,
 			"type": "kRow",
 			"subtype": "",
 			"sublen": 0
 		},
 		{
 			"name": "iNextPromise",
+			"order": 4,
 			"type": "kObjectref",
 			"subtype": "oPromise",
 			"sublen": 0
 		},
 		{
 			"name": "iOwner",
+			"order": 5,
 			"type": "kObjectref",
 			"subtype": "",
 			"sublen": 0,
@@ -40,6 +45,7 @@
 		},
 		{
 			"name": "iPendingErrText",
+			"order": 6,
 			"type": "kCharacter",
 			"subtype": "kSimplechar",
 			"sublen": 100000000,
@@ -47,12 +53,14 @@
 		},
 		{
 			"name": "iPendingResults",
+			"order": 7,
 			"type": "kRow",
 			"subtype": "",
 			"sublen": 0
 		},
 		{
 			"name": "iRejectCallback",
+			"order": 8,
 			"type": "kItemref",
 			"subtype": "",
 			"sublen": 0,
@@ -60,6 +68,7 @@
 		},
 		{
 			"name": "iResolveCallback",
+			"order": 9,
 			"type": "kItemref",
 			"subtype": "",
 			"sublen": 0,
@@ -67,18 +76,21 @@
 		},
 		{
 			"name": "iResolvedPromise",
+			"order": 10,
 			"type": "kObjectref",
 			"subtype": "oPromise",
 			"sublen": 0
 		},
 		{
 			"name": "iTag",
+			"order": 11,
 			"type": "kCharacter",
 			"subtype": "kSimplechar",
 			"sublen": 100000000
 		},
 		{
 			"name": "state",
+			"order": 12,
 			"type": "kInteger",
 			"subtype": "kShortint",
 			"sublen": 0,

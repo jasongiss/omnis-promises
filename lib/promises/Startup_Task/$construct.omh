@@ -1,0 +1,6 @@
+Calculate lBits as sys(2)
+Calculate iIsDesign as bittest(lBits,31)
+
+If iIsDesign
+	Do $menus.mPromises.$open("promises",kFilemenu)
+End If

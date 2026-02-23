@@ -1,0 +1,16 @@
+On evClick ## Event Parameters - pRow( Itemreference )
+	Do iObjects.C2.$methods.$add(iCallbackName) Returns lMethodRef
+	
+	If bool(lMethodRef)
+		
+		Do lMethodRef.$lvardefs.$add("pResults",kRow,0,0,kTrue)
+		Do lMethodRef.$lvardefs.$add("pExtraParams",kRow,0,0,kTrue)
+		Do lMethodRef.$lvardefs.$add("pErrorText",kCharacter,kSimplechar,10000,kTrue)
+		Do lMethodRef.$lvardefs.$add("pSuccess",kBoolean,0,0,kTrue)
+		
+		Calculate lMethodRef.$desc as "This is a Promise callback method. It will be called when a promise completes (either 'fulfilled' or 'rejected' - denoted by pSuccess)"
+		
+		Do $cinst.$close()
+	Else
+		OK message Error {Could not create method - perhaps a method with this name already exists?}
+	End If
