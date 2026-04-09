@@ -8,6 +8,7 @@
 	"ivardefs": [
 		{
 			"name": "iPromises",
+			"order": 1,
 			"type": "kList",
 			"subtype": "",
 			"sublen": 0

@@ -1,12 +1,14 @@
 [
 	{
 		"name": "$construct",
+		"order": 1,
 		"pvardefs": [
 
 		],
 		"lvardefs": [
 			{
 				"name": "lTest",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "",
 				"sublen": 0
@@ -15,6 +17,7 @@
 	},
 	{
 		"name": "$destruct",
+		"order": 2,
 		"pvardefs": [
 
 		],
@@ -25,9 +28,11 @@
 	},
 	{
 		"name": "$createPromise",
+		"order": 3,
 		"pvardefs": [
 			{
 				"name": "pTag",
+				"order": 3,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -37,12 +42,14 @@
 		"lvardefs": [
 			{
 				"name": "lPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "oPromise",
 				"sublen": 0
 			},
 			{
 				"name": "luid",
+				"order": 2,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000
@@ -51,9 +58,11 @@
 	},
 	{
 		"name": "$deletePromise",
+		"order": 4,
 		"pvardefs": [
 			{
 				"name": "pPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "oPromise",
 				"sublen": 0,
@@ -66,10 +75,12 @@
 	},
 	{
 		"name": "$newFulfilledPromise",
+		"order": 5,
 		"desc": "Creates a promise which is already fulfilled.",
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -77,6 +88,7 @@
 			},
 			{
 				"name": "pTag",
+				"order": 3,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -86,6 +98,7 @@
 		"lvardefs": [
 			{
 				"name": "lPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "oPromise",
 				"sublen": 0
@@ -94,10 +107,12 @@
 	},
 	{
 		"name": "$newRejectedPromise",
+		"order": 6,
 		"desc": "Creates a promise which is already rejected.",
 		"pvardefs": [
 			{
 				"name": "pErrorText",
+				"order": 2,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -105,6 +120,7 @@
 			},
 			{
 				"name": "pResults",
+				"order": 1,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -113,6 +129,7 @@
 			},
 			{
 				"name": "pTag",
+				"order": 4,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -122,6 +139,7 @@
 		"lvardefs": [
 			{
 				"name": "lPromise",
+				"order": 3,
 				"type": "kObjectref",
 				"subtype": "oPromise",
 				"sublen": 0
@@ -130,10 +148,12 @@
 	},
 	{
 		"name": "$resolvePromiseCallback",
+		"order": 7,
 		"desc": "This method can be used as a promise callback method, which will resolve (or reject) another promise, which is provided as column1 of 'pExtraParams'.\r\rThis is useful if you have a 'main' promise you want to return from a method, and have that promise resolved at the end of a chain of other promises.",
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 4,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -141,6 +161,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -148,6 +169,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 5,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -155,6 +177,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 3,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -164,6 +187,7 @@
 		"lvardefs": [
 			{
 				"name": "lResultPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "promises.oPromise",
 				"sublen": 0

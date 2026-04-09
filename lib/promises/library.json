@@ -14,6 +14,7 @@
 		"animateui": true,
 		"canfocusbuttons": "kPlatformdefault",
 		"centuryrange": 1980,
+		"compatiblejsonexport": true,
 		"defaultname": "",
 		"defineresolvesfieldrefs": false,
 		"designdpi": "96,72,75",
