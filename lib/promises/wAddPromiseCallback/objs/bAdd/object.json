@@ -13,7 +13,7 @@
 		"backpattern": 0,
 		"bordercolor": "kColorDefault",
 		"borderradius": "4",
-		"buttonmode": "kBMuser",
+		"buttonmode": "kBMok",
 		"buttonstyle": "kIDEButton",
 		"candropcursor": 0,
 		"componentinfo": {

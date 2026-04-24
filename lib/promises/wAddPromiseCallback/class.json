@@ -10,7 +10,7 @@
 	"ivardefs": [
 		{
 			"name": "iCallbackName",
-			"order": 2,
+			"order": 1,
 			"type": "kCharacter",
 			"subtype": "kSimplechar",
 			"sublen": 100000000,
@@ -18,28 +18,28 @@
 		},
 		{
 			"name": "iClasses",
-			"order": 1,
+			"order": 2,
 			"type": "kList",
 			"subtype": "",
 			"sublen": 0
 		},
 		{
 			"name": "iClassRef",
-			"order": 5,
+			"order": 3,
 			"type": "kItemref",
 			"subtype": "",
 			"sublen": 0
 		},
 		{
 			"name": "iMethodEditors",
-			"order": 3,
+			"order": 4,
 			"type": "kList",
 			"subtype": "",
 			"sublen": 0
 		},
 		{
 			"name": "iObjects",
-			"order": 4,
+			"order": 5,
 			"type": "kList",
 			"subtype": "",
 			"sublen": 0
