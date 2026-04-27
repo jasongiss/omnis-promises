@@ -6,16 +6,20 @@ If state<>kPromiseState.FINISHED
 	Do $cinst.$_findRejectHandler(lRejectHandlerPromise).$ref Returns lRejectCallback
 	
 	If not(isnull(lRejectCallback.$validref))&lRejectCallback.$cando()
-		Do lRejectCallback(pResults,lRejectHandlerPromise.iExtraResolveParams,pErrorText,kFalse)
+		Do lRejectCallback(pResults,lRejectHandlerPromise.iExtraResolveParams,pErrorText,kFalse) Returns iResolvedPromise
 		Calculate state as kPromiseState.FINISHED
 	Else If not(isnull((iResolveCallback.$validref)))&iResolveCallback.$cando() ## If there's no explicit catch() method defined (here or down the chain), then use the 'then' method (passing false for success param)
-		Do iResolveCallback(pResults,iExtraResolveParams,pErrorText,kFalse)
+		Do iResolveCallback(pResults,iExtraResolveParams,pErrorText,kFalse) Returns iResolvedPromise
 		Calculate state as kPromiseState.FINISHED
 	Else
 		Calculate iPendingResults as pResults
 		Calculate iPendingErrText as pErrorText
 		# Send to trace log Promise "[iTag]" has no handlers, so will pend
 		Quit method
+	End If
+	
+	If bool(iResolvedPromise)
+		Do iResolvedPromise.$then($cinst().$_resolveNextPromise.$ref)
 	End If
 	
 End If
