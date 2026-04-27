@@ -24,4 +24,7 @@ If state<>kPromiseState.FINISHED
 	
 End If
 
-Do $cinst.$destroy(kTrue)
+# This promise may have been destroyed when calling the reject callback
+If $cinst().$class().$name="oPromise"
+	Do $cinst.$destroy(kTrue)
+End If
