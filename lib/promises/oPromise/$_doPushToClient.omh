@@ -13,6 +13,15 @@ If bool(lFormInst)
 	If pSuccess
 		Do lRow.$assigncols(lResolvePushID,pResults,lExtraParams)
 	Else
+		# Add an 'error' column to the results row, and populate with the error text, if there's no 'error' col already:
+		If isnull(pResults)
+			Do pResults.$define()
+		End If
+		If isnull(pResults.$cols.$findname("error"))
+			Do pResults.$cols.$add("error",kCharacter,kSimplechar)
+			Calculate pResults.error as pErrorText
+		End If
+		
 		Do lRow.$assigncols(lRejectPushID,pResults,lExtraParams)
 	End If
 	Do lFormInst.$pushdata(lRow)

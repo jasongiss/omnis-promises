@@ -15,13 +15,6 @@
 			"initval": "#NULL"
 		},
 		{
-			"name": "iExtraRejectParams",
-			"order": 2,
-			"type": "kRow",
-			"subtype": "",
-			"sublen": 0
-		},
-		{
 			"name": "iExtraResolveParams",
 			"order": 3,
 			"type": "kRow",

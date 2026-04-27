@@ -1,5 +1,7 @@
 If state=kPromiseState.PENDING|state=kPromiseState.RESOLVED
 	
+	Send to trace log Promise "[iTag]" is being resolved
+	
 	Calculate state as kPromiseState.RESOLVED
 	
 	If not(isnull((iResolveCallback.$validref)))&iResolveCallback.$cando()
@@ -13,6 +15,7 @@ If state=kPromiseState.PENDING|state=kPromiseState.RESOLVED
 		Calculate state as kPromiseState.FINISHED
 	Else
 		Calculate iPendingResults as pResults
+		Send to trace log Promise "[iTag]" has no handlers, so will pend
 		Quit method
 	End If
 	
