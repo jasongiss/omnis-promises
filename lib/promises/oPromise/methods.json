@@ -165,7 +165,7 @@
 			},
 			{
 				"name": "pExtraParams",
-				"order": 3,
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -173,7 +173,7 @@
 			},
 			{
 				"name": "pPushErrorID",
-				"order": 4,
+				"order": 3,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -210,7 +210,7 @@
 		"pvardefs": [
 			{
 				"name": "pResults",
-				"order": 2,
+				"order": 3,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -218,7 +218,7 @@
 			},
 			{
 				"name": "pErrorText",
-				"order": 3,
+				"order": 4,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -236,7 +236,7 @@
 			},
 			{
 				"name": "lRejectHandlerPromise",
-				"order": 4,
+				"order": 2,
 				"type": "kObjectref",
 				"subtype": "oPromise",
 				"sublen": 0
