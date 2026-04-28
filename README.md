@@ -87,6 +87,60 @@ Do lPromise.$catch($cinst().$myFailureMethod.$ref)
 ```
 
 
+### **$thenPushToClient(pFormInst, pPushID, [pExtraParams, pPushErrorID])**: 
+A convenience method for **Remote Form** (web client) scenarios. When the promise resolves, it calls `$pushdata` on the given remote form instance, sending a row with `id`, `data`, and `extraParams` columns. If the promise is rejected, it pushes the same structure using `pPushErrorID` as the `id`, and adds an `error` column to the data row (containing the error text) if one is not already present.
+
+This is equivalent to calling `$then` with a callback that performs the push, and is provided as a shortcut to avoid writing boilerplate server-side callback methods for simple push-to-client flows.
+
+You only use this when you are *consuming* promises.
+
+**Parameters:**
+- **pFormInst** (Item Ref): An *Item Reference* to the remote form instance to push data to.
+- **pPushID** (Character): The push ID sent in the `id` field when the promise resolves successfully.
+- (Optional) **pExtraParams** (Row): Extra data to include in the `extraParams` field of the pushed row.
+- (Optional) **pPushErrorID** (Character): The push ID sent when the promise is rejected. Defaults to `"ERROR"`.
+
+The remote form's `$pushed` handler will receive a row with:
+- **id** (Character): `pPushID` on success, or `pPushErrorID` on failure.
+- **data** (Row): The promise's result row. On failure, an `error` column is added (if not already present) containing the error text.
+- **extraParams** (Row): The `pExtraParams` passed here.
+
+**Returns:**
+- A new chained promise (same as `$then`).
+
+e.g:
+```
+Do lPromise.$thenPushToClient($cinst.$ref,"FETCH_COMPLETE")
+# Or with a custom error push ID:
+Do lPromise.$thenPushToClient($cinst.$ref,"FETCH_COMPLETE",row(),"FETCH_ERROR")
+```
+
+
+### **$catchPushToClient(pFormInst, [pExtraParams, pPushErrorID])**: 
+A convenience method for **Remote Form** (web client) scenarios. When the promise is **rejected**, it calls `$pushdata` on the given remote form instance, sending a row with `id`, `data`, and `extraParams` columns. An `error` column is added to the data row (if not already present) containing the error text.
+
+This is the push-to-client equivalent of `$catch`, and is useful for sending error information to the remote client without writing a server-side callback method.
+
+You only use this when you are *consuming* promises.
+
+**Parameters:**
+- **pFormInst** (Item Ref): An *Item Reference* to the remote form instance to push data to.
+- (Optional) **pExtraParams** (Row): Extra data to include in the `extraParams` field of the pushed row.
+- (Optional) **pPushErrorID** (Character): The push ID sent in the `id` field when the promise is rejected. Defaults to `"ERROR"`.
+
+The remote form's `$pushed` handler will receive a row with:
+- **id** (Character): `pPushErrorID` (defaults to `"ERROR"`).
+- **data** (Row): The promise's result row, with an `error` column added (if not already present) containing the error text.
+- **extraParams** (Row): The `pExtraParams` passed here.
+
+e.g:
+```
+Do lPromise.$catchPushToClient($cinst.$ref)
+# Or with a custom error push ID:
+Do lPromise.$catchPushToClient($cinst.$ref,row(),"FETCH_ERROR")
+```
+
+
 ### **$resolve(pResults)**: 
 Mark the promise as completed **successfully**, and pass some results. 
 
