@@ -1,2 +1,3 @@
-
-OK message Error {[pErrorText]}
+Do iResults.$add(con("Error: ",pErrorText))
+Do $cinst.$redraw()
+# OK message Error {[pErrorText]}

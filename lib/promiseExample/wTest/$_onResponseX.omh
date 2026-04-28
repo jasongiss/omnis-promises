@@ -4,7 +4,7 @@ If pResults.httpStatusCode=200
 	Do $cinst.$redraw()
 	If len(pExtraParams.C1)
 		
-		If pExtraParams.C1="F"
+		If pExtraParams.C1="FAIL"
 			Quit method iPromiseManager.$newRejectedPromise("Something awful happened")
 		End If
 		

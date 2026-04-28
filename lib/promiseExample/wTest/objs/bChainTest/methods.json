@@ -1,12 +1,14 @@
 [
 	{
 		"name": "$event",
+		"order": 1,
 		"pvardefs": [
 
 		],
 		"lvardefs": [
 			{
-				"name": "iPromise",
+				"name": "lPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "promises.oPromise",
 				"sublen": 0

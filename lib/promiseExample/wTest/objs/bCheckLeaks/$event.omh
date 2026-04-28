@@ -1,0 +1,15 @@
+On evClick ## Event Parameters - pRow( Itemreference )
+	Do promises.$objects.oPromise.$listrefs() Returns lPromises
+	If lPromises.$linecount
+		Do lTags.$define("")
+		For lPromises.$line from 1 to lPromises.$linecount step 1
+			Do lTags.$add(lPromises.C1.iTag)
+		End For
+		
+		
+		OK message Warning {There are [lPromises.$linecount] promises still retained: [join(lTags,", ")]}
+		
+		OK message {The promise manager has [iPromiseManager.iPromises.$linecount] promises}
+	Else
+		OK message {There are no retained promises}
+	End If

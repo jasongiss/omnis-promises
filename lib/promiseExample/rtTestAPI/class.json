@@ -11,12 +11,14 @@
 	"ivardefs": [
 		{
 			"name": "iInput",
+			"order": 1,
 			"type": "kCharacter",
 			"subtype": "kSimplechar",
 			"sublen": 100000000
 		},
 		{
 			"name": "iTimer",
+			"order": 2,
 			"type": "kObjectref",
 			"subtype": ".Timer Library.Timer worker",
 			"sublen": 0

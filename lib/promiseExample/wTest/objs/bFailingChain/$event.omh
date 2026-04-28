@@ -1,0 +1,13 @@
+On evClick ## Event Parameters - pRow( Itemreference )
+	Do iResults.$define("")
+	Do $cinst.$redraw()
+	
+	Do $cinst.$sendHTTPRequest("A") Returns lPromise
+	
+	Do lPromise.$then($cinst().$_onResponseX.$ref,,row("B")) Returns lPromise
+	Do lPromise.$then($cinst().$_onResponseX.$ref,,row("C")) Returns lPromise
+	Do lPromise.$then($cinst().$_onResponseX.$ref,,row("D")) Returns lPromise
+	Do lPromise.$then($cinst().$_onResponseX.$ref,,row("FAIL")) Returns lPromise
+	Do lPromise.$then($cinst().$_onResponseX.$ref,,row("E")) Returns lPromise
+	Do lPromise.$then($cinst().$_onDone.$ref) Returns lPromise
+	Do lPromise.$catch($cinst().$_onError.$ref)

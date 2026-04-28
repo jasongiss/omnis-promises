@@ -2,7 +2,7 @@
 	"classtype": "kWindow",
 	"omnisversion": "12.0",
 	"designtaskname": "Startup_Task",
-	"nextident": 1018,
+	"nextident": 1020,
 	"lastgroupident": 0,
 	"cvardefs": [
 
@@ -10,12 +10,14 @@
 	"ivardefs": [
 		{
 			"name": "iPromiseManager",
+			"order": 1,
 			"type": "kObjectref",
 			"subtype": "promises.oPromiseManager",
 			"sublen": 0
 		},
 		{
 			"name": "iResults",
+			"order": 2,
 			"type": "kList",
 			"subtype": "",
 			"sublen": 0
@@ -64,7 +66,7 @@
 		"issubwindow": false,
 		"issupercomponent": false,
 		"keepclicks": true,
-		"left": 564,
+		"left": 522,
 		"menuedge": "kBorderChisel",
 		"menunames": "",
 		"minheight": 0,
@@ -86,7 +88,7 @@
 		"toolbarnames": "",
 		"toolbaroptions": "kTBOptionNone",
 		"toolbarpos": "kDockingAreaNone",
-		"top": 200,
+		"top": 336,
 		"userinfo": "",
 		"usesheets": false,
 		"version": "",

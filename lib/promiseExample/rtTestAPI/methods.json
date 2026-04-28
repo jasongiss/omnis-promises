@@ -1,6 +1,7 @@
 [
 	{
 		"name": "$construct",
+		"order": 1,
 		"pvardefs": [
 
 		],
@@ -10,6 +11,7 @@
 	},
 	{
 		"name": "$destruct",
+		"order": 2,
 		"pvardefs": [
 
 		],
@@ -19,6 +21,7 @@
 	},
 	{
 		"name": "$completed",
+		"order": 3,
 		"pvardefs": [
 
 		],

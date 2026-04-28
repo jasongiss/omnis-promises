@@ -1,5 +1,11 @@
 If pSuccess
-	OK message Complete {All Done}
+	Do iResults.$add(utf8tochar(pResults.responseContent))
+	Do iResults.$add("Complete")
+	# OK message Complete {All Done}
 Else
-	OK message Error {[pErrorText]}
+	Do iResults.$add(con("Error: ",pErrorText))
+	# OK message Error {[pErrorText]}
 End If
+Do $cinst.$redraw()
+
+Quit method iPromiseManager.$newFulfilledPromise()

@@ -1,6 +1,7 @@
 [
 	{
 		"name": "$construct",
+		"order": 1,
 		"pvardefs": [
 
 		],
@@ -10,6 +11,7 @@
 	},
 	{
 		"name": "$destruct",
+		"order": 2,
 		"pvardefs": [
 
 		],
@@ -19,9 +21,11 @@
 	},
 	{
 		"name": "$sendHTTPRequest",
+		"order": 3,
 		"pvardefs": [
 			{
 				"name": "pInput",
+				"order": 4,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -31,18 +35,21 @@
 		"lvardefs": [
 			{
 				"name": "lHTTPWorker",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": ".OW3.OW3 Worker Objects\\HTTPClientWorker",
 				"sublen": 0
 			},
 			{
 				"name": "lPromise",
+				"order": 2,
 				"type": "kObjectref",
 				"subtype": "promises.oPromise",
 				"sublen": 0
 			},
 			{
 				"name": "lURL",
+				"order": 3,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000
@@ -51,9 +58,11 @@
 	},
 	{
 		"name": "$_onResponseA",
+		"order": 4,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 1,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -61,6 +70,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -68,6 +78,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 3,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -75,6 +86,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 4,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -87,9 +99,11 @@
 	},
 	{
 		"name": "$_onResponseB",
+		"order": 5,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 1,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -97,6 +111,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -104,6 +119,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 3,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -111,6 +127,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 4,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -123,9 +140,11 @@
 	},
 	{
 		"name": "$_onResponseC",
+		"order": 6,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 1,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -133,6 +152,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -140,6 +160,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 3,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -147,6 +168,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 4,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -159,9 +181,11 @@
 	},
 	{
 		"name": "$_onResponseX",
+		"order": 7,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -169,6 +193,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 3,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -176,6 +201,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 4,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -183,6 +209,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 5,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -192,6 +219,7 @@
 		"lvardefs": [
 			{
 				"name": "lPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "promises.oPromise",
 				"sublen": 0
@@ -200,9 +228,11 @@
 	},
 	{
 		"name": "$_onError",
+		"order": 8,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -210,6 +240,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 3,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -217,6 +248,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 4,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -224,6 +256,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 5,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -233,6 +266,7 @@
 		"lvardefs": [
 			{
 				"name": "lPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "promises.oPromise",
 				"sublen": 0
@@ -241,9 +275,11 @@
 	},
 	{
 		"name": "$_onDone",
+		"order": 9,
 		"pvardefs": [
 			{
 				"name": "pResults",
+				"order": 2,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -251,6 +287,7 @@
 			},
 			{
 				"name": "pExtraParams",
+				"order": 3,
 				"type": "kRow",
 				"subtype": "",
 				"sublen": 0,
@@ -258,6 +295,7 @@
 			},
 			{
 				"name": "pErrorText",
+				"order": 4,
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000,
@@ -265,6 +303,7 @@
 			},
 			{
 				"name": "pSuccess",
+				"order": 5,
 				"type": "kBoolean",
 				"subtype": 0,
 				"sublen": 0,
@@ -274,6 +313,7 @@
 		"lvardefs": [
 			{
 				"name": "lPromise",
+				"order": 1,
 				"type": "kObjectref",
 				"subtype": "promises.oPromise",
 				"sublen": 0

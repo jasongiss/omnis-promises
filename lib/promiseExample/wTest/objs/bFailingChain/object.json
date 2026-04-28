@@ -1,6 +1,6 @@
 {
-	"ident": 1016,
-	"order": 1,
+	"ident": 1018,
+	"order": 3,
 	"objtype": "kPushbutton",
 	"properties": {
 		"actedata": true,
@@ -38,13 +38,14 @@
 		"fontsize": 0,
 		"fontstyle": "kPlain",
 		"forecolor": "kColor3DFace",
+		"gestureevents": false,
 		"height": 28,
 		"helpfile": 0,
 		"iconcolor": "kColorDefault",
 		"iconid": 0,
 		"inactnorec": false,
 		"keyevents": false,
-		"left": 32,
+		"left": 40,
 		"mouseevents": false,
 		"nodropcursor": 0,
 		"nogray": false,
@@ -58,12 +59,13 @@
 		"subwindowstyle": false,
 		"text": {
 			"type": 0,
-			"calc": "Chain HTTP Requests"
+			"calc": "Failing Chain"
 		},
 		"textcolor": "kColorDefault",
 		"tooltip": "",
 		"tooltippos": "kTooltipPosMouse",
-		"top": 68,
+		"top": 105,
+		"touchgestures": false,
 		"userinfo": "",
 		"visible": true,
 		"width": 194

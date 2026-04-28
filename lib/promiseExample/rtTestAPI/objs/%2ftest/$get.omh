@@ -1,7 +1,7 @@
 # Wait for a second
 Calculate iTimer as $extobjects.Timer Library.$objects.Timer worker.$newref()
-Calculate iTimer.$useseconds as kTrue
-Calculate iTimer.$timervalue as 1
+Calculate iTimer.$useseconds as kFalse
+Calculate iTimer.$timervalue as 500
 Calculate iTimer.$callbackinst as $cinst
 
 Calculate iInput as input
