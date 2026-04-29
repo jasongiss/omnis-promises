@@ -5,7 +5,7 @@ If state=kPromiseState.PENDING|state=kPromiseState.RESOLVED
 	Calculate state as kPromiseState.RESOLVED
 	
 	If not(isnull((iResolveCallback.$validref)))&iResolveCallback.$cando()
-		Do iResolveCallback(pResults,iExtraResolveParams,"",kTrue) Returns iResolvedPromise
+		Do iResolveCallback(pResults,iExtraResolveParams,"",kTrue,iTag) Returns iResolvedPromise
 		If bool(iResolvedPromise)
 			Do iResolvedPromise.$then($cinst().$_resolveNextPromise.$ref)
 		Else If bool(iNextPromise)

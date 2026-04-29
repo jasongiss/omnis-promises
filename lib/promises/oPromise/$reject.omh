@@ -6,10 +6,10 @@ If state<>kPromiseState.FINISHED
 	Do $cinst.$_findRejectHandler(lRejectHandlerPromise).$ref Returns lRejectCallback
 	
 	If not(isnull(lRejectCallback.$validref))&lRejectCallback.$cando()
-		Do lRejectCallback(pResults,lRejectHandlerPromise.iExtraResolveParams,pErrorText,kFalse) Returns iResolvedPromise
+		Do lRejectCallback(pResults,lRejectHandlerPromise.iExtraResolveParams,pErrorText,kFalse,iTag) Returns iResolvedPromise
 		Calculate state as kPromiseState.FINISHED
 	Else If not(isnull((iResolveCallback.$validref)))&iResolveCallback.$cando() ## If there's no explicit catch() method defined (here or down the chain), then use the 'then' method (passing false for success param)
-		Do iResolveCallback(pResults,iExtraResolveParams,pErrorText,kFalse) Returns iResolvedPromise
+		Do iResolveCallback(pResults,iExtraResolveParams,pErrorText,kFalse,iTag) Returns iResolvedPromise
 		Calculate state as kPromiseState.FINISHED
 	Else
 		Calculate iPendingResults as pResults
@@ -26,5 +26,5 @@ End If
 
 # This promise may have been destroyed when calling the reject callback
 If $cinst().$class().$name="oPromise"
-	Do $cinst.$destroy(kTrue)
+	Do $cinst.$destroy(not(bool(iResolvedPromise)))
 End If

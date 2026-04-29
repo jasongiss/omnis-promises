@@ -7,6 +7,7 @@ On evClick ## Event Parameters - pRow( Itemreference )
 		Do lMethodRef.$lvardefs.$add("pExtraParams",kRow,0,0,kTrue)
 		Do lMethodRef.$lvardefs.$add("pErrorText",kCharacter,kSimplechar,10000,kTrue)
 		Do lMethodRef.$lvardefs.$add("pSuccess",kBoolean,0,0,kTrue)
+		Do lMethodRef.$lvardefs.$add("pTag",kCharacter,kSimplechar,10000,kTrue).$desc.$assign("The tag for the promise which is finishing")
 		
 		Calculate lMethodRef.$desc as "This is a Promise callback method. It will be called when a promise completes (either 'fulfilled' or 'rejected' - denoted by pSuccess)"
 		
