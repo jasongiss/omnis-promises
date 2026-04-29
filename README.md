@@ -195,6 +195,7 @@ The methods which you assign to *$then* or *$catch* receive the following parame
 2) **pExtraParams** (Row): The pExtraParams you passed through when assigning your *$then* or *$catch* method.
 3) **pErrorText** (Character): Any error text (if the promise was rejected). It will never be set if you use a separate *$catch* method.
 4) **pSuccess** (Boolean): True if the promise was resolved successfully. It will never be false if you use a separate *$catch* method.
+5) **pTag** (Character): The tag given to the promise which is finishing.
 
 
 You can use the *Promises* **menu** to automatically add such a promise callback method.
