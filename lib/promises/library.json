@@ -4,7 +4,7 @@
 
 	],
 	"properties": {
-		"ignoreexternal": false,
+		"ignoreexternal": true,
 		"nodebug": false,
 		"remotedebug": false,
 		"userinfo": ""
