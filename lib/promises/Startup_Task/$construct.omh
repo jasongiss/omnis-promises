@@ -2,5 +2,8 @@ Calculate lBits as sys(2)
 Calculate iIsDesign as bittest(lBits,31)
 
 If iIsDesign
-	Do $menus.mPromises.$open("promises",kFilemenu)
+	If sys(6)="N"
+		Calculate lPromiseMenuShortcut as "\\ar" ## Alt + R on Windows, as Ctrl + Alt shortcuts don't seem to work there
+	End If
+	Do $root.$modes.$installtool(kEnvToolAddOn,"Add Promise Callback...",'clock',"Helper to add promise callback methods",lPromiseMenuShortcut)
 End If

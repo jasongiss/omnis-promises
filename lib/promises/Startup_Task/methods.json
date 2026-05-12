@@ -19,12 +19,31 @@
 				"type": "kInteger",
 				"subtype": "k32bitint",
 				"sublen": 0
+			},
+			{
+				"name": "lPromiseMenuShortcut",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "\"\\\\car\"",
+				"desc": "Cmd+Option+R "
 			}
 		]
 	},
 	{
 		"name": "$destruct",
 		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$exectool",
+		"order": 3,
 		"pvardefs": [
 
 		],
